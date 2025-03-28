@@ -22,7 +22,7 @@ from utils import (
 )
 
 st.set_page_config(layout="wide")
-st.title("Wren AI LLM Service Demo")
+st.title("QueryGenie LLM Service Demo")
 
 if "deployment_id" not in st.session_state:
     st.session_state["deployment_id"] = str(uuid.uuid4())

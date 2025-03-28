@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ComponentProps, useState } from 'react';
 import { Typography, Row, Col } from 'antd';
-import { getDataSources, getTemplates } from './utils';
+import { getDataSources } from './utils';
 import { makeIterable } from '@/utils/iteration';
 import ButtonItem from './ButtonItem';
 import {
@@ -26,7 +26,7 @@ export default function Starter(props) {
   const [template, setTemplate] = useState<SampleDatasetName>();
 
   const dataSources = getDataSources();
-  const templates = getTemplates();
+  // const templates = getTemplates();
 
   const onSelectDataSource = (value: DataSourceName) => {
     onNext && onNext({ dataSource: value });
@@ -43,15 +43,7 @@ export default function Starter(props) {
         Connect a data source
       </Typography.Title>
       <Typography.Text>
-        Vote for your favorite data sources on{' '}
-        <Link
-          href="https://github.com/Canner/WrenAI/discussions/327"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </Link>
-        .
+        Select a database running on Docker or your local machine.
       </Typography.Text>
       <Row className="mt-6" gutter={[16, 16]}>
         <DataSourceIterator
@@ -63,7 +55,7 @@ export default function Starter(props) {
 
       <div className="py-8" />
 
-      <Typography.Title level={1} className="mb-3">
+      {/* <Typography.Title level={1} className="mb-3">
         Play around with sample data
       </Typography.Title>
       <Row className="mt-6" gutter={[16, 16]}>
@@ -75,7 +67,7 @@ export default function Starter(props) {
         />
       </Row>
 
-      <div className="py-12" />
+      <div className="py-12" /> */}
     </>
   );
 }

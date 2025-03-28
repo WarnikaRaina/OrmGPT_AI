@@ -45,15 +45,7 @@ export default function ConnectDataSource(props: Props) {
         Connect the data source
       </Typography.Title>
       <Typography.Text>
-        Vote for your favorite data sources on{' '}
-        <Link
-          href="https://github.com/Canner/WrenAI/discussions/327"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </Link>
-        .
+        Select a database running on Docker or your local machine.
       </Typography.Text>
 
       <StyledForm form={form} layout="vertical" className="p-6 my-6">
@@ -70,7 +62,7 @@ export default function ConnectDataSource(props: Props) {
               {current.label}
             </DataSource>
           </Col>
-          <Col className="text-right" span={12}>
+          {/* <Col className="text-right" span={12}>
             Learn more information in the {current.label}{' '}
             <Link
               href={current.guide}
@@ -80,7 +72,7 @@ export default function ConnectDataSource(props: Props) {
               setup guide
             </Link>
             .
-          </Col>
+          </Col> */}
         </Row>
         <current.component />
       </StyledForm>
